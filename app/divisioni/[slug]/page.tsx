@@ -104,7 +104,7 @@ const data: Record<
       "Bandi e incentivi",
       "Percorsi digitali",
     ],
-    video: "/assets/videos/academy-pexels.mp4",
+    video: "/assets/videos/academy-business.mp4",
   },
   mobility: {
     name: "Mobility",
