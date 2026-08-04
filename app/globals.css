@@ -1,20 +1,1096 @@
 @import "tailwindcss";
-:root{--navy:#06234d;--blue:#1764be;--pale:#f4f8fd;--ink:#0b244a;--green:#77a92d;--yellow:#ffba08}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink)}a{text-decoration:none;color:inherit}.topbar{height:78px;display:flex;align-items:center;gap:28px;padding:10px 5.2%;border-bottom:1px solid #e0e7ef;background:#fff;position:sticky;top:0;z-index:10}.brand-logo{display:block;width:238px;height:54px;background:url('/assets/omnimpresa-brand-reference.png') no-repeat -17px -49px/274px auto}.brand-lockup{display:flex}.topbar nav{margin-left:auto;display:flex;gap:33px;font-size:14px}.topbar nav a:first-child{border-bottom:2px solid var(--navy);padding-bottom:14px}.button{border:0;border-radius:5px;padding:13px 18px;background:var(--navy);color:#fff;font-weight:bold;font-size:13px;display:inline-flex;gap:24px;align-items:center;cursor:pointer}.button span{font-size:20px}.light{background:#fff;color:var(--navy);border:1px solid var(--navy)}.header-cta{white-space:nowrap}.hamb{display:none}.hero{min-height:485px;display:grid;grid-template-columns:48% 52%;background:#fff}.hero-copy{padding:56px 9% 40px 11%;z-index:1}.eyebrow{color:var(--blue);font-weight:bold;font-size:11px;letter-spacing:1.4px}.hero h1{font-size:45px;line-height:1.05;letter-spacing:-1px;margin:16px 0}.hero h1 em,.about em{color:var(--blue);font-style:normal}.hero-copy>p:not(.eyebrow),.about p{color:#4d5f78;line-height:1.5;font-size:15px;max-width:470px}.actions{display:flex;gap:16px;margin-top:22px}.hero-art{position:relative;overflow:hidden;background:#bdd8ef}.office{position:absolute;inset:0;background:linear-gradient(90deg,#ffffffdd,#0b417331),url('/assets/omnimpresa-home-reference.png') 88% 28%/176% auto no-repeat}.network{position:absolute;inset:0}.hero-wheel{position:absolute;left:43%;top:31%;width:125px;height:125px}.orbit{position:absolute;color:#fff;font-size:14px;font-weight:bold;text-shadow:0 1px 5px #102d4e;white-space:nowrap}.finance{left:18%;top:13%}.energy{left:70%;top:14%}.technology{left:76%;top:45%}.security{left:14%;top:44%}.academy{left:11%;bottom:17%}.digital{left:72%;bottom:16%}.mobility{left:42%;bottom:3%}.wheel{border-radius:50%;display:grid;grid-template-columns:repeat(3,1fr);gap:5px;padding:7px;background:#fff}.wheel i{background:var(--navy);clip-path:polygon(48% 0,100% 0,100% 100%,0 100%,0 44%)}.wheel i:nth-child(2){background:#06a1bd}.wheel i:nth-child(3){background:var(--green)}.wheel i:nth-child(4){background:var(--yellow)}.wheel i:nth-child(5){background:#1764be}.wheel i:nth-child(6){background:#92979c}.wheel:after{content:"";position:absolute;inset:37px;border-radius:50%;background:#fff;border:9px solid var(--navy)}.section{padding:10px 5.2% 28px}.section h2,.method h2{text-align:center;font-size:19px;margin:0 0 11px}.division-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:12px}.division-card{min-height:156px;border:1px solid #dbe3eb;border-radius:5px;text-align:center;padding:14px 10px;transition:.2s}.division-card:hover{transform:translateY(-3px);box-shadow:0 10px 20px #153b6d14}.line-icon{font-size:33px;color:var(--blue)}.green{color:var(--green)}.yellow{color:var(--yellow)}.slate{color:#6e7079}.division-card h3{font-size:14px;margin:8px 0}.division-card p{font-size:10.5px;line-height:1.35;color:#344360;margin:0}.division-card strong{font-size:21px;display:block;margin-top:6px}.method{padding:15px 6%;background:#f2f7fc}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:35px}.steps article{display:flex;gap:12px;align-items:center}.step-icon{width:44px;height:44px;border:1px solid #aabed5;border-radius:50%;display:grid;place-items:center;color:#19477b;font-size:27px;flex:none}.steps h3{font-size:14px;margin:0 0 5px}.steps p{font-size:11px;line-height:1.35;margin:0;color:#354866}.sectors>div{display:grid;grid-template-columns:repeat(5,1fr)}.sectors article{display:grid;grid-template-columns:43px 1fr;border-right:1px solid #ced7e0;padding:4px 15px;align-items:center}.sectors article:last-child{border:0}.sectors span{font-size:29px;color:#0a4e9a;grid-row:span 2}.sectors b{font-size:12px}.sectors small{font-size:10px}.about{padding:56px 12%;display:grid;grid-template-columns:1fr .7fr;gap:90px;background:#f6f9fd}.about h2,.contact h2{font-size:37px;line-height:1.05;margin:12px 0}.about-note{background:var(--navy);color:#fff;padding:30px;border-radius:9px;align-self:center;box-shadow:13px 13px 0 #e5eef9}.about-note b{font-size:21px}.about-note p{color:#d7e3f0}.about-note a{color:#ffc023;font-weight:bold}.contact{padding:55px 11%;display:grid;grid-template-columns:1fr 1fr;gap:80px;background:linear-gradient(115deg,#06234d,#03183a);color:white}.contact .eyebrow{color:#8dccff}.contact p{color:#d8e5f4;line-height:1.5}.contact small{color:#9db2ca}.contact form{background:white;color:var(--ink);padding:21px;border-radius:7px;display:grid;gap:12px}.contact label{font-weight:bold;font-size:12px}.contact input,.contact select{display:block;width:100%;padding:10px;margin-top:5px;border:1px solid #cbd8e6;border-radius:4px;font:inherit}.success{text-align:center;padding:22px}.success p{color:#50627a}.footer-logo{filter:brightness(0) invert(1)}footer{background:#031a3b;color:#fff;padding:30px 6%;display:grid;grid-template-columns:1fr 1.3fr auto;gap:30px;align-items:center}footer .brand-logo{height:52px}footer p{font-size:12px;line-height:1.5;color:#c5d2e2;max-width:360px}footer>div:last-child{display:flex;gap:18px;font-size:12px;color:#c5d2e2}
-@media(max-width:900px){.topbar{height:67px;padding:8px 4%}.brand-logo{width:200px;height:48px;background-size:230px auto;background-position:-14px -41px}.topbar nav{display:none;position:absolute;left:0;right:0;top:67px;background:#fff;padding:16px 5%;flex-direction:column;gap:16px;box-shadow:0 5px 14px #001a3b15}.topbar nav.open{display:flex}.hamb{display:block;margin-left:auto;border:0;background:none;font-size:23px}.header-cta{display:none}.hero{grid-template-columns:1fr}.hero-copy{padding:43px 8%;background:#fffffff4}.hero-art{min-height:340px}.division-grid{grid-template-columns:repeat(4,1fr)}.steps{grid-template-columns:repeat(2,1fr);gap:20px}.about,.contact{grid-template-columns:1fr;gap:30px;padding:44px 8%}footer{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.hero h1{font-size:34px}.actions{flex-direction:column;align-items:flex-start}.division-grid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:1fr}.sectors>div{grid-template-columns:1fr 1fr}.sectors article{border:0}.sectors article:last-child{grid-column:span 2}footer{grid-template-columns:1fr}}
-.division-detail{display:grid;grid-template-columns:48% 52%;min-height:455px;background:linear-gradient(90deg,#fff 40%,#e6f1fa)}.detail-copy{padding:60px 9% 45px 11%}.detail-icon{display:inline-grid;place-items:center;width:29px;height:29px;border-radius:5px;background:#1261b9;color:#fff;margin-right:10px;font-size:16px}.detail-copy h1{font-size:46px;letter-spacing:-1.2px;margin:24px 0 13px}.detail-copy h1 em{font-style:normal;color:var(--blue)}.detail-copy>p:not(.eyebrow){font-size:17px;line-height:1.5;color:#52637b;max-width:490px}.detail-visual{position:relative;overflow:hidden;background:linear-gradient(120deg,#bcd8eb,#6387a9)}.detail-visual:before{content:"";position:absolute;inset:0;background:url('/assets/omnimpresa-finance-reference.png') 78% 38%/160% auto no-repeat;opacity:.72;mix-blend-mode:multiply}.detail-visual .hero-wheel{top:35%;left:40%}.visual-lines{position:absolute;inset:20% 12%;border:1px solid #ffffff99;border-radius:48%;transform:rotate(-12deg)}.detail-solutions{padding:28px 5%;background:#fff}.detail-solutions h2{text-align:center;font-size:20px;margin:0 0 20px}.detail-solutions>div{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}.detail-solutions article{min-height:205px;border:1px solid #dbe3eb;border-radius:6px;padding:18px;text-align:center}.solution-icon{font-size:38px;color:var(--blue);display:block}.detail-solutions h3{font-size:15px;margin:12px 0 7px}.detail-solutions p{font-size:11px;line-height:1.4;color:#52637b}.detail-solutions a{font-size:12px;font-weight:bold;color:var(--navy)}.detail-cta{margin:14px 4% 35px;padding:28px 4%;display:flex;align-items:center;gap:28px;border-radius:9px;background:var(--navy);color:#fff}.detail-cta h2{font-size:25px;margin:0}.detail-cta p{margin-right:auto;color:#d4e1ed}.detail-cta .light{border:0}@media(max-width:900px){.division-detail{grid-template-columns:1fr}.detail-visual{min-height:320px}.detail-solutions>div{grid-template-columns:repeat(3,1fr)}.detail-cta{flex-wrap:wrap}}@media(max-width:560px){.detail-copy{padding:40px 8%}.detail-copy h1{font-size:35px}.detail-solutions>div{grid-template-columns:1fr 1fr}.detail-cta{display:block}.detail-cta p{margin:12px 0 20px}}
-.hero h1{font-size:56px}.hero-video,.division-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.9}.hero-video{z-index:0}.hero-art .office{z-index:1}.hero-art .network{z-index:2}.magnifier{position:absolute;z-index:3;left:44%;top:32%;width:130px;height:130px;border:12px solid #fff;border-radius:50%;filter:drop-shadow(0 4px 8px #051b3c55)}.magnifier:after{content:"";position:absolute;width:54px;height:12px;background:#fff;right:-41px;bottom:2px;transform:rotate(45deg);border-radius:8px}.hero-wheel{display:none}.division-video{z-index:0}.detail-visual .hero-wheel{display:grid;z-index:2}.detail-visual .visual-lines{z-index:1}.detail-copy h1{font-size:56px}@media(max-width:900px){.hero h1,.detail-copy h1{font-size:44px}.magnifier{width:92px;height:92px;border-width:9px;left:43%;top:27%}.magnifier:after{width:40px;height:9px;right:-31px}}
-.hero-art .office{background:linear-gradient(90deg,#ffffff66,#0b417b44);opacity:1}.detail-visual:before{opacity:.16;mix-blend-mode:normal}
+:root {
+  --navy: #06234d;
+  --blue: #1764be;
+  --pale: #f4f8fd;
+  --ink: #0b244a;
+  --green: #77a92d;
+  --yellow: #ffba08;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--ink);
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.topbar {
+  height: 78px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 10px 5.2%;
+  border-bottom: 1px solid #e0e7ef;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.brand-logo {
+  display: block;
+  width: 238px;
+  height: 54px;
+  background: url("/assets/omnimpresa-brand-reference.png")
+    no-repeat -17px -49px/274px auto;
+}
+.brand-lockup {
+  display: flex;
+}
+.topbar nav {
+  margin-left: auto;
+  display: flex;
+  gap: 33px;
+  font-size: 14px;
+}
+.topbar nav a:first-child {
+  border-bottom: 2px solid var(--navy);
+  padding-bottom: 14px;
+}
+.button {
+  border: 0;
+  border-radius: 5px;
+  padding: 13px 18px;
+  background: var(--navy);
+  color: #fff;
+  font-weight: bold;
+  font-size: 13px;
+  display: inline-flex;
+  gap: 24px;
+  align-items: center;
+  cursor: pointer;
+}
+.button span {
+  font-size: 20px;
+}
+.light {
+  background: #fff;
+  color: var(--navy);
+  border: 1px solid var(--navy);
+}
+.header-cta {
+  white-space: nowrap;
+}
+.hamb {
+  display: none;
+}
+.hero {
+  min-height: 485px;
+  display: grid;
+  grid-template-columns: 48% 52%;
+  background: #fff;
+}
+.hero-copy {
+  padding: 56px 9% 40px 11%;
+  z-index: 1;
+}
+.eyebrow {
+  color: var(--blue);
+  font-weight: bold;
+  font-size: 11px;
+  letter-spacing: 1.4px;
+}
+.hero h1 {
+  font-size: 45px;
+  line-height: 1.05;
+  letter-spacing: -1px;
+  margin: 16px 0;
+}
+.hero h1 em,
+.about em {
+  color: var(--blue);
+  font-style: normal;
+}
+.hero-copy > p:not(.eyebrow),
+.about p {
+  color: #4d5f78;
+  line-height: 1.5;
+  font-size: 15px;
+  max-width: 470px;
+}
+.actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 22px;
+}
+.hero-art {
+  position: relative;
+  overflow: hidden;
+  background: #bdd8ef;
+}
+.office {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, #ffffffdd, #0b417331),
+    url("/assets/omnimpresa-home-reference.png") 88% 28%/176% auto no-repeat;
+}
+.network {
+  position: absolute;
+  inset: 0;
+}
+.hero-wheel {
+  position: absolute;
+  left: 43%;
+  top: 31%;
+  width: 125px;
+  height: 125px;
+}
+.orbit {
+  position: absolute;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-shadow: 0 1px 5px #102d4e;
+  white-space: nowrap;
+}
+.finance {
+  left: 18%;
+  top: 13%;
+}
+.energy {
+  left: 70%;
+  top: 14%;
+}
+.technology {
+  left: 76%;
+  top: 45%;
+}
+.security {
+  left: 14%;
+  top: 44%;
+}
+.academy {
+  left: 11%;
+  bottom: 17%;
+}
+.digital {
+  left: 72%;
+  bottom: 16%;
+}
+.mobility {
+  left: 42%;
+  bottom: 3%;
+}
+.wheel {
+  border-radius: 50%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  padding: 7px;
+  background: #fff;
+}
+.wheel i {
+  background: var(--navy);
+  clip-path: polygon(48% 0, 100% 0, 100% 100%, 0 100%, 0 44%);
+}
+.wheel i:nth-child(2) {
+  background: #06a1bd;
+}
+.wheel i:nth-child(3) {
+  background: var(--green);
+}
+.wheel i:nth-child(4) {
+  background: var(--yellow);
+}
+.wheel i:nth-child(5) {
+  background: #1764be;
+}
+.wheel i:nth-child(6) {
+  background: #92979c;
+}
+.wheel:after {
+  content: "";
+  position: absolute;
+  inset: 37px;
+  border-radius: 50%;
+  background: #fff;
+  border: 9px solid var(--navy);
+}
+.section {
+  padding: 10px 5.2% 28px;
+}
+.section h2,
+.method h2 {
+  text-align: center;
+  font-size: 19px;
+  margin: 0 0 11px;
+}
+.division-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 12px;
+}
+.division-card {
+  min-height: 156px;
+  border: 1px solid #dbe3eb;
+  border-radius: 5px;
+  text-align: center;
+  padding: 14px 10px;
+  transition: 0.2s;
+}
+.division-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px #153b6d14;
+}
+.line-icon {
+  font-size: 33px;
+  color: var(--blue);
+}
+.green {
+  color: var(--green);
+}
+.yellow {
+  color: var(--yellow);
+}
+.slate {
+  color: #6e7079;
+}
+.division-card h3 {
+  font-size: 14px;
+  margin: 8px 0;
+}
+.division-card p {
+  font-size: 10.5px;
+  line-height: 1.35;
+  color: #344360;
+  margin: 0;
+}
+.division-card strong {
+  font-size: 21px;
+  display: block;
+  margin-top: 6px;
+}
+.method {
+  padding: 15px 6%;
+  background: #f2f7fc;
+}
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 35px;
+}
+.steps article {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.step-icon {
+  width: 44px;
+  height: 44px;
+  border: 1px solid #aabed5;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #19477b;
+  font-size: 27px;
+  flex: none;
+}
+.steps h3 {
+  font-size: 14px;
+  margin: 0 0 5px;
+}
+.steps p {
+  font-size: 11px;
+  line-height: 1.35;
+  margin: 0;
+  color: #354866;
+}
+.sectors > div {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.sectors article {
+  display: grid;
+  grid-template-columns: 43px 1fr;
+  border-right: 1px solid #ced7e0;
+  padding: 4px 15px;
+  align-items: center;
+}
+.sectors article:last-child {
+  border: 0;
+}
+.sectors span {
+  font-size: 29px;
+  color: #0a4e9a;
+  grid-row: span 2;
+}
+.sectors b {
+  font-size: 12px;
+}
+.sectors small {
+  font-size: 10px;
+}
+.about {
+  padding: 56px 12%;
+  display: grid;
+  grid-template-columns: 1fr 0.7fr;
+  gap: 90px;
+  background: #f6f9fd;
+}
+.about h2,
+.contact h2 {
+  font-size: 37px;
+  line-height: 1.05;
+  margin: 12px 0;
+}
+.about-note {
+  background: var(--navy);
+  color: #fff;
+  padding: 30px;
+  border-radius: 9px;
+  align-self: center;
+  box-shadow: 13px 13px 0 #e5eef9;
+}
+.about-note b {
+  font-size: 21px;
+}
+.about-note p {
+  color: #d7e3f0;
+}
+.about-note a {
+  color: #ffc023;
+  font-weight: bold;
+}
+.contact {
+  padding: 55px 11%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  background: linear-gradient(115deg, #06234d, #03183a);
+  color: white;
+}
+.contact .eyebrow {
+  color: #8dccff;
+}
+.contact p {
+  color: #d8e5f4;
+  line-height: 1.5;
+}
+.contact small {
+  color: #9db2ca;
+}
+.contact form {
+  background: white;
+  color: var(--ink);
+  padding: 21px;
+  border-radius: 7px;
+  display: grid;
+  gap: 12px;
+}
+.contact label {
+  font-weight: bold;
+  font-size: 12px;
+}
+.contact input,
+.contact select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #cbd8e6;
+  border-radius: 4px;
+  font: inherit;
+}
+.success {
+  text-align: center;
+  padding: 22px;
+}
+.success p {
+  color: #50627a;
+}
+.footer-logo {
+  filter: brightness(0) invert(1);
+}
+footer {
+  background: #031a3b;
+  color: #fff;
+  padding: 30px 6%;
+  display: grid;
+  grid-template-columns: 1fr 1.3fr auto;
+  gap: 30px;
+  align-items: center;
+}
+footer .brand-logo {
+  height: 52px;
+}
+footer p {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #c5d2e2;
+  max-width: 360px;
+}
+footer > div:last-child {
+  display: flex;
+  gap: 18px;
+  font-size: 12px;
+  color: #c5d2e2;
+}
+@media (max-width: 900px) {
+  .topbar {
+    height: 67px;
+    padding: 8px 4%;
+  }
+  .brand-logo {
+    width: 200px;
+    height: 48px;
+    background-size: 230px auto;
+    background-position: -14px -41px;
+  }
+  .topbar nav {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 67px;
+    background: #fff;
+    padding: 16px 5%;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 0 5px 14px #001a3b15;
+  }
+  .topbar nav.open {
+    display: flex;
+  }
+  .hamb {
+    display: block;
+    margin-left: auto;
+    border: 0;
+    background: none;
+    font-size: 23px;
+  }
+  .header-cta {
+    display: none;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .hero-copy {
+    padding: 43px 8%;
+    background: #fffffff4;
+  }
+  .hero-art {
+    min-height: 340px;
+  }
+  .division-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .steps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .about,
+  .contact {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 44px 8%;
+  }
+  footer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 560px) {
+  .hero h1 {
+    font-size: 34px;
+  }
+  .actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .division-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .steps {
+    grid-template-columns: 1fr;
+  }
+  .sectors > div {
+    grid-template-columns: 1fr 1fr;
+  }
+  .sectors article {
+    border: 0;
+  }
+  .sectors article:last-child {
+    grid-column: span 2;
+  }
+  footer {
+    grid-template-columns: 1fr;
+  }
+}
+.division-detail {
+  display: grid;
+  grid-template-columns: 48% 52%;
+  min-height: 455px;
+  background: linear-gradient(90deg, #fff 40%, #e6f1fa);
+}
+.detail-copy {
+  padding: 60px 9% 45px 11%;
+}
+.detail-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 29px;
+  height: 29px;
+  border-radius: 5px;
+  background: #1261b9;
+  color: #fff;
+  margin-right: 10px;
+  font-size: 16px;
+}
+.detail-copy h1 {
+  font-size: 46px;
+  letter-spacing: -1.2px;
+  margin: 24px 0 13px;
+}
+.detail-copy h1 em {
+  font-style: normal;
+  color: var(--blue);
+}
+.detail-copy > p:not(.eyebrow) {
+  font-size: 17px;
+  line-height: 1.5;
+  color: #52637b;
+  max-width: 490px;
+}
+.detail-visual {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(120deg, #bcd8eb, #6387a9);
+}
+.detail-visual:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/assets/omnimpresa-finance-reference.png") 78% 38%/160% auto
+    no-repeat;
+  opacity: 0.72;
+  mix-blend-mode: multiply;
+}
+.detail-visual .hero-wheel {
+  top: 35%;
+  left: 40%;
+}
+.visual-lines {
+  position: absolute;
+  inset: 20% 12%;
+  border: 1px solid #ffffff99;
+  border-radius: 48%;
+  transform: rotate(-12deg);
+}
+.detail-solutions {
+  padding: 28px 5%;
+  background: #fff;
+}
+.detail-solutions h2 {
+  text-align: center;
+  font-size: 20px;
+  margin: 0 0 20px;
+}
+.detail-solutions > div {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+.detail-solutions article {
+  min-height: 205px;
+  border: 1px solid #dbe3eb;
+  border-radius: 6px;
+  padding: 18px;
+  text-align: center;
+}
+.solution-icon {
+  font-size: 38px;
+  color: var(--blue);
+  display: block;
+}
+.detail-solutions h3 {
+  font-size: 15px;
+  margin: 12px 0 7px;
+}
+.detail-solutions p {
+  font-size: 11px;
+  line-height: 1.4;
+  color: #52637b;
+}
+.detail-solutions a {
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--navy);
+}
+.detail-cta {
+  margin: 14px 4% 35px;
+  padding: 28px 4%;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  border-radius: 9px;
+  background: var(--navy);
+  color: #fff;
+}
+.detail-cta h2 {
+  font-size: 25px;
+  margin: 0;
+}
+.detail-cta p {
+  margin-right: auto;
+  color: #d4e1ed;
+}
+.detail-cta .light {
+  border: 0;
+}
+@media (max-width: 900px) {
+  .division-detail {
+    grid-template-columns: 1fr;
+  }
+  .detail-visual {
+    min-height: 320px;
+  }
+  .detail-solutions > div {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .detail-cta {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 560px) {
+  .detail-copy {
+    padding: 40px 8%;
+  }
+  .detail-copy h1 {
+    font-size: 35px;
+  }
+  .detail-solutions > div {
+    grid-template-columns: 1fr 1fr;
+  }
+  .detail-cta {
+    display: block;
+  }
+  .detail-cta p {
+    margin: 12px 0 20px;
+  }
+}
+.hero h1 {
+  font-size: 56px;
+}
+.hero-video,
+.division-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+.hero-video {
+  z-index: 0;
+}
+.hero-art .office {
+  z-index: 1;
+}
+.hero-art .network {
+  z-index: 2;
+}
+.magnifier {
+  position: absolute;
+  z-index: 3;
+  left: 44%;
+  top: 32%;
+  width: 130px;
+  height: 130px;
+  border: 12px solid #fff;
+  border-radius: 50%;
+  filter: drop-shadow(0 4px 8px #051b3c55);
+}
+.magnifier:after {
+  content: "";
+  position: absolute;
+  width: 54px;
+  height: 12px;
+  background: #fff;
+  right: -41px;
+  bottom: 2px;
+  transform: rotate(45deg);
+  border-radius: 8px;
+}
+.hero-wheel {
+  display: none;
+}
+.division-video {
+  z-index: 0;
+}
+.detail-visual .hero-wheel {
+  display: grid;
+  z-index: 2;
+}
+.detail-visual .visual-lines {
+  z-index: 1;
+}
+.detail-copy h1 {
+  font-size: 56px;
+}
+@media (max-width: 900px) {
+  .hero h1,
+  .detail-copy h1 {
+    font-size: 44px;
+  }
+  .magnifier {
+    width: 92px;
+    height: 92px;
+    border-width: 9px;
+    left: 43%;
+    top: 27%;
+  }
+  .magnifier:after {
+    width: 40px;
+    height: 9px;
+    right: -31px;
+  }
+}
+.hero-art .office {
+  background: linear-gradient(90deg, #ffffff66, #0b417b44);
+  opacity: 1;
+}
+.detail-visual:before {
+  opacity: 0.16;
+  mix-blend-mode: normal;
+}
 
 /* Animated OMNIMPRESA division hub: real brand mark at centre, seven divisions in orbit. */
-.hero-art{background:linear-gradient(135deg,#061c3e,#0b4b88);isolation:isolate}
-.hero-art .hero-video,.hero-art .office{display:none}
-.hero-art .network{display:block;inset:7% 5%;border:1px solid #ffffff22;border-radius:50%;animation:hub-spin 28s linear infinite}
-.hero-art .network:before{content:"";position:absolute;left:50%;top:50%;width:156px;height:156px;transform:translate(-50%,-50%);background:url('/assets/omnimpresa-brand-reference.png') -18px -92px/600px auto no-repeat;filter:drop-shadow(0 10px 22px #00152e88);z-index:3}
-.hero-art .network:after{content:"";position:absolute;left:50%;top:50%;width:74%;height:74%;transform:translate(-50%,-50%);border:1px solid #d9f1ff66;border-radius:50%;box-shadow:0 0 0 30px #ffffff08,0 0 0 60px #ffffff05}
-.hero-art .orbit{z-index:4;text-shadow:0 2px 8px #001a3d;animation:hub-counter 28s linear infinite}
-.hero-art .finance{left:7%;top:11%}.hero-art .energy{left:74%;top:10%}.hero-art .technology{left:82%;top:47%}.hero-art .security{left:6%;top:47%}.hero-art .academy{left:14%;bottom:12%}.hero-art .digital{left:69%;bottom:11%}.hero-art .mobility{left:43%;bottom:1%}
-.hero-art .hero-wheel{display:none}
-@keyframes hub-spin{to{transform:rotate(360deg)}}
-@keyframes hub-counter{to{transform:rotate(-360deg)}}
-@media(max-width:900px){.hero-art .network{inset:8% 4%}.hero-art .network:before{width:112px;height:112px}.hero-art .orbit{font-size:11px}}
+.hero-art {
+  background: linear-gradient(135deg, #061c3e, #0b4b88);
+  isolation: isolate;
+}
+.hero-art .hero-video,
+.hero-art .office {
+  display: none;
+}
+.hero-art .network {
+  display: block;
+  inset: 7% 5%;
+  border: 1px solid #ffffff22;
+  border-radius: 50%;
+  animation: hub-spin 28s linear infinite;
+}
+.hero-art .network:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 156px;
+  height: 156px;
+  transform: translate(-50%, -50%);
+  background: url("/assets/omnimpresa-brand-reference.png") -18px -92px/600px
+    auto no-repeat;
+  filter: drop-shadow(0 10px 22px #00152e88);
+  z-index: 3;
+}
+.hero-art .network:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 74%;
+  height: 74%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #d9f1ff66;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 30px #ffffff08,
+    0 0 0 60px #ffffff05;
+}
+.hero-art .orbit {
+  z-index: 4;
+  text-shadow: 0 2px 8px #001a3d;
+  animation: hub-counter 28s linear infinite;
+}
+.hero-art .finance {
+  left: 7%;
+  top: 11%;
+}
+.hero-art .energy {
+  left: 74%;
+  top: 10%;
+}
+.hero-art .technology {
+  left: 82%;
+  top: 47%;
+}
+.hero-art .security {
+  left: 6%;
+  top: 47%;
+}
+.hero-art .academy {
+  left: 14%;
+  bottom: 12%;
+}
+.hero-art .digital {
+  left: 69%;
+  bottom: 11%;
+}
+.hero-art .mobility {
+  left: 43%;
+  bottom: 1%;
+}
+.hero-art .hero-wheel {
+  display: none;
+}
+@keyframes hub-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes hub-counter {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+@media (max-width: 900px) {
+  .hero-art .network {
+    inset: 8% 4%;
+  }
+  .hero-art .network:before {
+    width: 112px;
+    height: 112px;
+  }
+  .hero-art .orbit {
+    font-size: 11px;
+  }
+}
+
+/* Clean animated division system */
+.hero {
+  min-height: 570px;
+}
+.hero-art {
+  min-height: 570px;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(
+    circle at 50% 46%,
+    #145794 0,
+    #082f61 38%,
+    #041b3d 74%,
+    #03152f 100%
+  );
+  overflow: hidden;
+}
+.hero-art:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(125deg, #1e76b71c, transparent 45%),
+    radial-gradient(circle at 82% 18%, #4db9e51c, transparent 28%);
+  pointer-events: none;
+}
+.orbit-stage {
+  position: relative;
+  width: min(92%, 650px);
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+}
+.orbit-stage:before,
+.orbit-stage:after {
+  content: "";
+  position: absolute;
+  border: 1px solid #b9ddf347;
+  border-radius: 50%;
+  box-shadow: 0 0 25px #39a9e315 inset;
+}
+.orbit-stage:before {
+  inset: 8%;
+}
+.orbit-stage:after {
+  inset: 25%;
+}
+.orbit-core {
+  position: absolute;
+  z-index: 8;
+  width: 300px;
+  height: 104px;
+  border: 1px solid #ffffff55;
+  border-radius: 70px;
+  background: #fffffff2;
+  box-shadow:
+    0 18px 55px #00112799,
+    0 0 0 12px #ffffff0b;
+  display: grid;
+  place-items: center;
+}
+.orbit-logo {
+  width: 238px;
+  height: 54px;
+}
+.orbit-path {
+  --size: 84%;
+  --speed: 28s;
+  --delay: 0s;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: var(--size);
+  height: var(--size);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  animation: orbit-rotate var(--speed) linear infinite;
+  animation-delay: var(--delay);
+}
+.orbit-node {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%);
+  min-width: 126px;
+  height: 48px;
+  padding: 0 14px;
+  border: 1px solid #ffffff80;
+  border-radius: 28px;
+  background: #f8fbffff;
+  box-shadow: 0 9px 25px #00132966;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--navy);
+  font-size: 12px;
+  letter-spacing: 0.35px;
+  animation: orbit-counter var(--speed) linear infinite;
+  animation-delay: var(--delay);
+  transition:
+    box-shadow 0.2s,
+    scale 0.2s;
+  z-index: 4;
+}
+.orbit-node:hover {
+  box-shadow: 0 12px 34px #3fa6ff77;
+  scale: 1.06;
+}
+.orbit-node span {
+  font-size: 21px;
+  color: var(--blue);
+}
+.orbit-node.green span {
+  color: var(--green);
+}
+.orbit-node.yellow span {
+  color: var(--yellow);
+}
+.orbit-node.slate span {
+  color: #68758a;
+}
+.orbit-path-1 {
+  --size: 88%;
+  --speed: 34s;
+  --delay: -2s;
+}
+.orbit-path-2 {
+  --size: 88%;
+  --speed: 34s;
+  --delay: -19s;
+}
+.orbit-path-3 {
+  --size: 67%;
+  --speed: 27s;
+  --delay: -1s;
+}
+.orbit-path-4 {
+  --size: 67%;
+  --speed: 27s;
+  --delay: -10s;
+}
+.orbit-path-5 {
+  --size: 67%;
+  --speed: 27s;
+  --delay: -19s;
+}
+.orbit-path-6 {
+  --size: 47%;
+  --speed: 21s;
+  --delay: -3s;
+}
+.orbit-path-7 {
+  --size: 47%;
+  --speed: 21s;
+  --delay: -13.5s;
+}
+@keyframes orbit-rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@keyframes orbit-counter {
+  from {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+@media (max-width: 900px) {
+  .hero {
+    min-height: unset;
+  }
+  .hero-art {
+    min-height: 520px;
+  }
+  .orbit-stage {
+    width: min(96%, 520px);
+  }
+  .orbit-core {
+    width: 250px;
+    height: 90px;
+  }
+  .orbit-logo {
+    transform: scale(0.88);
+  }
+  .orbit-node {
+    min-width: 108px;
+    height: 42px;
+    padding: 0 10px;
+    font-size: 10px;
+  }
+  .orbit-node span {
+    font-size: 18px;
+  }
+}
+@media (max-width: 560px) {
+  .hero-art {
+    min-height: 430px;
+  }
+  .orbit-stage {
+    width: 430px;
+    max-width: 112vw;
+  }
+  .orbit-core {
+    width: 208px;
+    height: 76px;
+  }
+  .orbit-logo {
+    transform: scale(0.72);
+  }
+  .orbit-node {
+    min-width: 88px;
+    height: 36px;
+    padding: 0 8px;
+    font-size: 8.5px;
+  }
+  .orbit-node span {
+    font-size: 15px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .orbit-path,
+  .orbit-node {
+    animation-play-state: paused;
+  }
+}
