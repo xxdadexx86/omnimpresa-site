@@ -1,6 +1,25 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import {
+  BarChart3,
+  CarFront,
+  Cpu,
+  GraduationCap,
+  Leaf,
+  MonitorUp,
+  ShieldCheck,
+} from "lucide-react";
+
+const divisionIcons = {
+  Finance: BarChart3,
+  Energy: Leaf,
+  Technology: Cpu,
+  Digital: MonitorUp,
+  Security: ShieldCheck,
+  Academy: GraduationCap,
+  Mobility: CarFront,
+};
 
 const divisions = [
   [
@@ -125,19 +144,23 @@ export default function Home() {
         >
           <div className="orbit-stage">
             <div className="orbit-core">
-              <span className="brand-logo orbit-logo" />
+              <span className="orbit-logo-mark" aria-hidden="true" />
             </div>
-            {divisions.map(([name, icon, , tone], index) => (
-              <div className={`orbit-path orbit-path-${index + 1}`} key={name}>
-                <a
-                  className={`orbit-node ${tone}`}
-                  href={`/divisioni/${name.toLowerCase()}`}
-                >
-                  <span>{icon}</span>
-                  <b>{name}</b>
-                </a>
-              </div>
-            ))}
+            {divisions.map(([name, , , tone], index) => {
+              const Icon = divisionIcons[name as keyof typeof divisionIcons];
+              return (
+                <div className={`orbit-path orbit-path-${index + 1}`} key={name}>
+                  <a
+                    className={`orbit-node ${tone}`}
+                    href={`/divisioni/${name.toLowerCase()}`}
+                    aria-label={`Divisione ${name}`}
+                  >
+                    <Icon aria-hidden="true" strokeWidth={1.8} />
+                    <b>{name}</b>
+                  </a>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
