@@ -168,24 +168,25 @@ export default function Home() {
       <section id="divisioni" className="section divisions">
         <h2>Le nostre divisioni</h2>
         <div className="division-grid">
-          {divisions.map(([name, icon, text, tone]) => (
-            <a
-              className="division-card"
-              href={`/divisioni/${name.toLowerCase()}`}
-              key={name}
-            >
-              <img
-                className="division-image"
-                src={`/assets/divisions/${name.toLowerCase()}.png`}
-                alt={`OMNIMPRESA ${name}`}
-                loading="lazy"
-              />
-              <span className={`line-icon ${tone}`}>{icon}</span>
-              <h3>{name}</h3>
-              <p>{text}</p>
-              <strong>→</strong>
-            </a>
-          ))}
+          {divisions.map(([name, , text, tone]) => {
+            const Icon = divisionIcons[name as keyof typeof divisionIcons];
+            return (
+              <a
+                className="division-card"
+                href={`/divisioni/${name.toLowerCase()}`}
+                key={name}
+              >
+                <div className={`division-graphic ${tone}`}>
+                  <span className="division-ring division-ring-one" />
+                  <span className="division-ring division-ring-two" />
+                  <Icon aria-hidden="true" strokeWidth={1.65} />
+                </div>
+                <h3>{name}</h3>
+                <p>{text}</p>
+                <strong aria-hidden="true">→</strong>
+              </a>
+            );
+          })}
         </div>
       </section>
       <section id="metodo" className="method">

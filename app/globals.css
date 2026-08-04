@@ -1125,3 +1125,348 @@ footer > div:last-child {
     animation-play-state: paused;
   }
 }
+
+/* Harmonised responsive layout and icon-led division identity */
+body {
+  font-size: 16px;
+  line-height: 1.55;
+  background: #fff;
+}
+.topbar {
+  height: 84px;
+  padding-inline: clamp(24px, 5.2vw, 84px);
+}
+.topbar nav {
+  font-size: 15px;
+}
+.button {
+  min-height: 48px;
+  padding: 13px 20px;
+  font-size: 14px;
+}
+.hero {
+  min-height: 540px;
+  grid-template-columns: 52% 48%;
+}
+.hero-copy {
+  padding: 72px clamp(36px, 7vw, 112px);
+}
+.hero h1 {
+  font-size: clamp(50px, 4.4vw, 68px);
+  line-height: 1.02;
+  letter-spacing: -2px;
+}
+.hero-copy > p:not(.eyebrow) {
+  max-width: 590px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+.eyebrow {
+  font-size: 13px;
+}
+.hero-art {
+  min-height: 540px;
+}
+.orbit-stage {
+  width: min(78%, 470px);
+  background: repeating-radial-gradient(
+    circle,
+    transparent 0 17%,
+    #8ac8ef20 17.3% 17.6%,
+    transparent 17.9% 29%
+  );
+}
+.orbit-stage:before {
+  inset: 10%;
+  border-style: dashed;
+}
+.orbit-stage:after {
+  inset: 28%;
+}
+.orbit-core {
+  width: 112px;
+  height: 112px;
+  box-shadow: 0 14px 42px #00112799, 0 0 0 9px #ffffff0b;
+}
+.orbit-logo-mark {
+  width: 72px;
+  height: 72px;
+}
+.orbit-node {
+  width: 58px;
+  height: 58px;
+  box-shadow: 0 8px 22px #00132966;
+}
+.orbit-node svg {
+  width: 24px;
+  height: 24px;
+}
+.orbit-node b {
+  top: calc(100% + 5px);
+  font-size: 8.5px;
+}
+.section,
+.method,
+.about,
+.contact {
+  padding-block: 68px;
+  padding-inline: clamp(24px, 6vw, 96px);
+}
+.section h2,
+.method h2 {
+  margin-bottom: 30px;
+  font-size: 32px;
+  letter-spacing: -0.6px;
+}
+.divisions {
+  background: linear-gradient(180deg, #fff, #f7faff);
+}
+.division-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+.division-card {
+  min-height: 292px;
+  padding: 22px 22px 20px;
+  border-radius: 14px;
+  text-align: left;
+  box-shadow: 0 10px 30px #0b315b0b;
+}
+.division-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 42px #123b6c1c;
+}
+.division-image,
+.line-icon {
+  display: none;
+}
+.division-graphic {
+  position: relative;
+  height: 126px;
+  margin-bottom: 20px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 11px;
+  color: var(--blue);
+  background: radial-gradient(circle at 50% 50%, #fff 0 18%, #e7f2ff 19% 50%, #d7eaff 100%);
+}
+.division-graphic.green {
+  color: var(--green);
+  background: radial-gradient(circle at 50% 50%, #fff 0 18%, #eff7e8 19% 50%, #dfedd4 100%);
+}
+.division-graphic.yellow {
+  color: #e7a400;
+  background: radial-gradient(circle at 50% 50%, #fff 0 18%, #fff7dc 19% 50%, #ffedb2 100%);
+}
+.division-graphic.slate {
+  color: #617087;
+  background: radial-gradient(circle at 50% 50%, #fff 0 18%, #eef2f6 19% 50%, #dce4ec 100%);
+}
+.division-graphic svg {
+  position: relative;
+  z-index: 2;
+  width: 56px;
+  height: 56px;
+}
+.division-ring {
+  position: absolute;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  opacity: 0.2;
+}
+.division-ring-one {
+  width: 94px;
+  height: 94px;
+}
+.division-ring-two {
+  width: 154px;
+  height: 154px;
+  border-style: dashed;
+}
+.division-card h3 {
+  margin: 0 0 8px;
+  font-size: 22px;
+}
+.division-card p {
+  font-size: 15px;
+  line-height: 1.55;
+}
+.division-card strong {
+  margin-top: 14px;
+  font-size: 24px;
+}
+.method {
+  background: #eef5fc;
+}
+.steps {
+  gap: 20px;
+}
+.steps article {
+  min-height: 132px;
+  padding: 22px;
+  border: 1px solid #d9e5f0;
+  border-radius: 12px;
+  background: #fff;
+}
+.step-icon {
+  width: 54px;
+  height: 54px;
+}
+.steps h3 {
+  font-size: 18px;
+}
+.steps p {
+  font-size: 14px;
+}
+.sectors article {
+  padding: 14px 20px;
+}
+.sectors b {
+  font-size: 15px;
+}
+.sectors small {
+  font-size: 12px;
+}
+.about h2,
+.contact h2 {
+  font-size: clamp(40px, 4vw, 58px);
+}
+.about p,
+.contact p {
+  font-size: 17px;
+}
+.detail-copy > p:not(.eyebrow) {
+  font-size: 19px;
+}
+.detail-solutions {
+  padding: 54px clamp(24px, 5vw, 80px);
+}
+.detail-solutions h2 {
+  margin-bottom: 28px;
+  font-size: 30px;
+}
+.detail-solutions article {
+  min-height: 240px;
+  padding: 24px 18px;
+}
+.detail-solutions h3 {
+  font-size: 18px;
+}
+.detail-solutions p,
+.detail-solutions a {
+  font-size: 14px;
+}
+@media (max-width: 1100px) {
+  .division-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .hero h1 {
+    font-size: 52px;
+  }
+}
+@media (max-width: 900px) {
+  .topbar {
+    height: 72px;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .hero-copy {
+    padding: 52px 7%;
+  }
+  .hero-art {
+    min-height: 410px;
+  }
+  .orbit-stage {
+    width: min(82vw, 360px);
+  }
+  .section,
+  .method,
+  .about,
+  .contact {
+    padding-block: 52px;
+  }
+  .steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .detail-solutions > div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 560px) {
+  .hero-copy {
+    padding: 42px 6%;
+  }
+  .hero h1 {
+    font-size: clamp(38px, 11vw, 48px);
+    letter-spacing: -1.3px;
+  }
+  .hero-copy > p:not(.eyebrow) {
+    font-size: 16px;
+  }
+  .actions {
+    width: 100%;
+  }
+  .actions .button {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .hero-art {
+    min-height: 350px;
+  }
+  .orbit-stage {
+    width: 310px;
+    max-width: 92vw;
+  }
+  .orbit-core {
+    width: 78px;
+    height: 78px;
+  }
+  .orbit-logo-mark {
+    width: 52px;
+    height: 52px;
+    transform: none;
+  }
+  .orbit-node {
+    width: 43px;
+    height: 43px;
+  }
+  .orbit-node svg {
+    width: 18px;
+    height: 18px;
+  }
+  .orbit-node b {
+    font-size: 7px;
+    padding: 3px 5px;
+  }
+  .section h2,
+  .method h2 {
+    font-size: 28px;
+  }
+  .division-grid,
+  .steps,
+  .detail-solutions > div {
+    grid-template-columns: 1fr;
+  }
+  .division-card {
+    min-height: 270px;
+  }
+  .sectors > div {
+    grid-template-columns: 1fr;
+  }
+  .sectors article:last-child {
+    grid-column: auto;
+  }
+  .about,
+  .contact {
+    padding-inline: 6%;
+  }
+  .about h2,
+  .contact h2 {
+    font-size: 38px;
+  }
+  .detail-copy h1 {
+    font-size: 40px;
+  }
+}
