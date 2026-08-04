@@ -1,4 +1,23 @@
 import Link from "next/link";
+import {
+  BarChart3,
+  CarFront,
+  Cpu,
+  GraduationCap,
+  Leaf,
+  MonitorUp,
+  ShieldCheck,
+} from "lucide-react";
+
+const divisionIcons = {
+  finance: BarChart3,
+  energy: Leaf,
+  technology: Cpu,
+  digital: MonitorUp,
+  security: ShieldCheck,
+  academy: GraduationCap,
+  mobility: CarFront,
+};
 
 const data: Record<
   string,
@@ -131,6 +150,8 @@ export default async function DivisionPage({
 }) {
   const { slug } = await params;
   const d = data[slug] ?? data.finance;
+  const DivisionIcon =
+    divisionIcons[slug as keyof typeof divisionIcons] ?? BarChart3;
   return (
     <main>
       <header className="topbar">
@@ -152,7 +173,9 @@ export default async function DivisionPage({
       <section className="division-detail">
         <div className="detail-copy">
           <p className="eyebrow">
-            <span className="detail-icon">{d.icon}</span>
+            <span className="detail-icon">
+              <DivisionIcon aria-hidden="true" strokeWidth={1.8} />
+            </span>
             {d.label}
           </p>
           <h1>
@@ -186,7 +209,9 @@ export default async function DivisionPage({
         <div>
           {d.items.map((x) => (
             <article key={x}>
-              <span className="solution-icon">{d.icon}</span>
+              <span className="solution-icon">
+                <DivisionIcon aria-hidden="true" strokeWidth={1.7} />
+              </span>
               <h3>{x}</h3>
               <p>
                 Una soluzione configurata sulle esigenze e sugli obiettivi della

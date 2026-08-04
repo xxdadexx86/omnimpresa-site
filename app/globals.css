@@ -1470,3 +1470,225 @@ body {
     font-size: 40px;
   }
 }
+
+/* One-piece hero system shared by Home and all division pages */
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: linear-gradient(
+    108deg,
+    #ffffff 0%,
+    #f3f8fd 42%,
+    #cfe2f2 51%,
+    #0c4b82 68%,
+    #041a3a 100%
+  );
+}
+.hero:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(circle at 60% 50%, #62bce52b, transparent 35%);
+}
+.hero-copy,
+.hero-art {
+  background: transparent;
+}
+.hero-copy {
+  position: relative;
+  z-index: 3;
+}
+.hero-art:before {
+  background: radial-gradient(circle at 55% 50%, #54b2e429, transparent 56%);
+}
+.division-detail {
+  position: relative;
+  display: block;
+  min-height: 610px;
+  overflow: hidden;
+  isolation: isolate;
+  background: #061d3e;
+}
+.detail-copy {
+  position: relative;
+  z-index: 3;
+  width: 62%;
+  min-height: 610px;
+  padding: 94px clamp(44px, 7vw, 112px) 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    #ffffff 67%,
+    #ffffffed 80%,
+    #ffffff8a 91%,
+    transparent 100%
+  );
+}
+.detail-copy h1 {
+  max-width: 760px;
+  margin: 26px 0 18px;
+  font-size: clamp(50px, 4.3vw, 68px);
+  line-height: 1.02;
+  letter-spacing: -2px;
+}
+.detail-copy > p:not(.eyebrow) {
+  max-width: 620px;
+  font-size: 19px;
+  line-height: 1.65;
+}
+.detail-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+}
+.detail-icon svg {
+  width: 19px;
+  height: 19px;
+}
+.detail-visual {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  min-height: 610px;
+  background: #071f44;
+}
+.detail-visual:before {
+  display: none;
+}
+.detail-visual:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    #ffffff 31%,
+    #ffffffb8 45%,
+    #ffffff35 58%,
+    transparent 72%
+  );
+}
+.division-video {
+  opacity: 1;
+  object-position: 72% center;
+}
+.detail-solutions {
+  background: linear-gradient(180deg, #ffffff, #f5f9fd);
+}
+.detail-solutions > div {
+  gap: 22px;
+}
+.detail-solutions article {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  text-align: left;
+  background: #fff;
+  box-shadow: 0 10px 30px #0b315b0b;
+}
+.detail-solutions article:before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  right: -58px;
+  top: -64px;
+  border: 1px dashed #2874bd26;
+  border-radius: 50%;
+}
+.solution-icon {
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--blue);
+  background: #eaf4ff;
+}
+.solution-icon svg {
+  width: 31px;
+  height: 31px;
+}
+.detail-solutions h3 {
+  margin-top: 18px;
+}
+.detail-cta {
+  margin: 0;
+  padding: 46px clamp(24px, 6vw, 96px);
+  border-radius: 0;
+  background: linear-gradient(110deg, #031a3b, #0a4a82);
+}
+.detail-cta h2 {
+  font-size: 32px;
+}
+.detail-cta p {
+  font-size: 16px;
+}
+@media (max-width: 900px) {
+  .hero {
+    background: linear-gradient(180deg, #fff 0%, #f4f9fd 48%, #0d4c83 70%, #041a3a 100%);
+  }
+  .division-detail {
+    display: grid;
+    grid-template-rows: auto 360px;
+    min-height: auto;
+    background: linear-gradient(180deg, #fff, #dcecf8 55%, #071f44 100%);
+  }
+  .detail-copy {
+    width: 100%;
+    min-height: 0;
+    padding: 58px 7% 54px;
+    background: linear-gradient(180deg, #fff 0%, #fff 78%, #ffffffd9 92%, transparent 100%);
+  }
+  .detail-copy h1 {
+    font-size: clamp(44px, 8vw, 58px);
+  }
+  .detail-visual {
+    position: relative;
+    inset: auto;
+    min-height: 390px;
+    margin-top: -34px;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 15%, #000 100%);
+    mask-image: linear-gradient(to bottom, transparent 0, #000 15%, #000 100%);
+  }
+  .detail-visual:after {
+    background: linear-gradient(180deg, #ffffff8c 0%, transparent 24%);
+  }
+  .division-video {
+    object-position: center;
+  }
+  .detail-cta {
+    gap: 18px;
+  }
+}
+@media (max-width: 560px) {
+  .division-detail {
+    grid-template-rows: auto 300px;
+  }
+  .detail-copy {
+    padding: 46px 6% 44px;
+  }
+  .detail-copy h1 {
+    margin: 20px 0 14px;
+    font-size: 40px;
+  }
+  .detail-copy > p:not(.eyebrow) {
+    font-size: 16px;
+  }
+  .detail-visual {
+    min-height: 330px;
+  }
+  .detail-cta {
+    padding-block: 38px;
+  }
+  .detail-cta h2 {
+    font-size: 28px;
+  }
+}
