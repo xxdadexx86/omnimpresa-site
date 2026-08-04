@@ -174,6 +174,12 @@ export default function Home() {
               href={`/divisioni/${name.toLowerCase()}`}
               key={name}
             >
+              <img
+                className="division-image"
+                src={`/assets/divisions/${name.toLowerCase()}.png`}
+                alt={`OMNIMPRESA ${name}`}
+                loading="lazy"
+              />
               <span className={`line-icon ${tone}`}>{icon}</span>
               <h3>{name}</h3>
               <p>{text}</p>

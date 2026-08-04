@@ -225,15 +225,17 @@ a {
 }
 .division-grid {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 12px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
 }
 .division-card {
-  min-height: 156px;
+  min-height: 330px;
   border: 1px solid #dbe3eb;
-  border-radius: 5px;
+  border-radius: 10px;
   text-align: center;
-  padding: 14px 10px;
+  padding: 0 14px 18px;
+  overflow: hidden;
+  background: #fff;
   transition: 0.2s;
 }
 .division-card:hover {
@@ -241,8 +243,17 @@ a {
   box-shadow: 0 10px 20px #153b6d14;
 }
 .line-icon {
+  display: block;
+  margin-top: 14px;
   font-size: 33px;
   color: var(--blue);
+}
+.division-image {
+  display: block;
+  width: calc(100% + 28px);
+  aspect-ratio: 4 / 3;
+  margin-left: -14px;
+  object-fit: cover;
 }
 .green {
   color: var(--green);
@@ -254,12 +265,12 @@ a {
   color: #6e7079;
 }
 .division-card h3 {
-  font-size: 14px;
+  font-size: 18px;
   margin: 8px 0;
 }
 .division-card p {
-  font-size: 10.5px;
-  line-height: 1.35;
+  font-size: 13px;
+  line-height: 1.45;
   color: #344360;
   margin: 0;
 }
@@ -480,7 +491,7 @@ footer > div:last-child {
     min-height: 340px;
   }
   .division-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   .steps {
     grid-template-columns: repeat(2, 1fr);
@@ -505,7 +516,7 @@ footer > div:last-child {
     align-items: flex-start;
   }
   .division-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
   .steps {
     grid-template-columns: 1fr;
@@ -926,10 +937,9 @@ footer > div:last-child {
 }
 .orbit-logo-mark {
   display: block;
-  width: 62px;
-  height: 54px;
-  background: url("/assets/omnimpresa-brand-reference.png") no-repeat -17px -49px /
-    274px auto;
+  width: 86px;
+  height: 86px;
+  background: url("/assets/omnimpresa-symbol.png") center / contain no-repeat;
 }
 .orbit-path {
   --size: 84%;
@@ -1004,39 +1014,39 @@ footer > div:last-child {
   color: #68758a;
 }
 .orbit-path-1 {
-  --size: 88%;
-  --speed: 34s;
-  --delay: -2s;
+  --size: 82%;
+  --speed: 42s;
+  --delay: 0s;
 }
 .orbit-path-2 {
-  --size: 88%;
-  --speed: 34s;
-  --delay: -19s;
+  --size: 82%;
+  --speed: 42s;
+  --delay: -6s;
 }
 .orbit-path-3 {
-  --size: 67%;
-  --speed: 27s;
-  --delay: -1s;
+  --size: 82%;
+  --speed: 42s;
+  --delay: -12s;
 }
 .orbit-path-4 {
-  --size: 67%;
-  --speed: 27s;
-  --delay: -10s;
+  --size: 82%;
+  --speed: 42s;
+  --delay: -18s;
 }
 .orbit-path-5 {
-  --size: 67%;
-  --speed: 27s;
-  --delay: -19s;
+  --size: 82%;
+  --speed: 42s;
+  --delay: -24s;
 }
 .orbit-path-6 {
-  --size: 47%;
-  --speed: 21s;
-  --delay: -3s;
+  --size: 82%;
+  --speed: 42s;
+  --delay: -30s;
 }
 .orbit-path-7 {
-  --size: 47%;
-  --speed: 21s;
-  --delay: -13.5s;
+  --size: 82%;
+  --speed: 42s;
+  --delay: -36s;
 }
 @keyframes orbit-rotate {
   from {
