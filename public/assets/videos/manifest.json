@@ -1,5 +1,31 @@
 {
-  "overview": "Motion background generated from the approved OMNIMPRESA briefing artwork.",
-  "divisions": ["finance", "energy", "technology", "digital", "security", "academy", "mobility"],
-  "replaceWithPexels": true
+  "note": "Illustrative service footage. Legacy briefing-motion assets are not used.",
+  "license": "https://www.pexels.com/license/",
+  "active": {
+    "finance": {
+      "file": "finance-footage.mp4",
+      "source": "https://www.pexels.com/video/a-man-tapping-a-credit-card-on-a-terminal-6540557/"
+    },
+    "energy": {
+      "file": "energy-footage.mp4",
+      "source": "https://www.pexels.com/video/solar-panels-2887464/"
+    },
+    "technology": {
+      "file": "technology-footage.mp4",
+      "source": "https://videos.pexels.com/video-files/3202364/3202364-hd_1920_1080_25fps.mp4"
+    },
+    "digital": {
+      "file": "digital-footage.mp4",
+      "source": "https://www.pexels.com/video/a-programmer-working-on-a-laptop-computer-13522186/"
+    },
+    "security": {
+      "file": "security-footage.mp4",
+      "source": "https://videos.pexels.com/video-files/38779095/16477662_1920_1080_25fps.mp4",
+      "note": "Illustrative CCTV monitoring, not an OMNIMPRESA or Very Alarm control centre."
+    },
+    "academy": {
+      "file": "academy-footage.mp4",
+      "source": "Existing approved academy-business.mp4 corporate-training footage."
+    }
+  }
 }
