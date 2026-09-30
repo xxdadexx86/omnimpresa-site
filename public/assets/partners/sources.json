@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "verifiedOn": "2026-09-30",
+  "assetPolicy": "File originali dei marchi e colori originali conservati. Nessuna ricostruzione dei loghi.",
+  "assets": [
+    {
+      "brand": "UniCredit",
+      "file": "unicredit.png",
+      "sourcePage": "https://www.unicreditgroup.eu/en/press-media/press-kit.html",
+      "downloadUrl": "https://www.unicreditgroup.eu/content/dam/unicreditgroup-eu/images/press-and-media/Photogallery/LOGO_1260x844.png",
+      "sourceType": "official-press-kit",
+      "variant": "Logo rosso e nero su fondo bianco",
+      "width": 1260,
+      "height": 844,
+      "note": "Il logo originale è UniCredit. Business è una descrizione separata, non un lockup ricostruito."
+    },
+    {
+      "brand": "Worldline",
+      "file": "worldline.svg",
+      "sourcePage": "https://worldline.com/en/home/top-navigation/media-relations/image-library",
+      "downloadUrl": "https://worldline.com/content/dam/worldline-shared/logos/brand/logo-pack-svg.zip",
+      "archiveFile": "SVG/Horizontal/Logo-Worldline-Pepper-Horizontal-rgb.svg",
+      "sourceType": "official-logo-pack",
+      "variant": "Pepper, orizzontale, RGB",
+      "viewBox": "0 0 2146.89 354.8"
+    },
+    {
+      "brand": "SumUp",
+      "file": "sumup.svg",
+      "sourcePage": "https://www.sumup.com/en-gb/press/?lang=en",
+      "downloadUrl": "https://assets.ctfassets.net/txhaodyqr481/4CvwDXqSW3GzvsIHlAEIJF/a5938229e397b9282b35eb4367d34061/SumUp_LogoKit.zip",
+      "archiveFile": "Logo/SumUp Logo Black.svg",
+      "sourceType": "official-logo-kit",
+      "variant": "Black",
+      "width": 444,
+      "height": 128,
+      "viewBox": "0 0 444 128"
+    },
+    {
+      "brand": "FuturEnergy",
+      "file": "futur-energy.png",
+      "sourcePage": "https://futurenergyonline.it/",
+      "downloadUrl": "https://futurenergyonline.it/wp-content/uploads/2026/04/futurenergy-logo-pos.png",
+      "sourceType": "official-website"
+    },
+    {
+      "brand": "Very Alarm",
+      "file": "very-alarm.png",
+      "sourcePage": "https://veryalarm.it/",
+      "downloadUrl": "https://veryalarm.it/wp-content/uploads/2025/02/retina-logo-very-alarm-website.png",
+      "sourceType": "user-provided-original",
+      "note": "Logo originale fornito dall'utente; URL del marchio verificato come riferimento ufficiale."
+    },
+    {
+      "brand": "1Mobile",
+      "file": "1mobile.svg",
+      "sourcePage": "https://www.unomobile.it/",
+      "downloadUrl": "https://www.unomobile.it/img/logo.svg",
+      "sourceType": "official-website"
+    },
+    {
+      "brand": "L.D. Automation & AI",
+      "file": "ld-automation-ai.png",
+      "sourcePage": "https://www.ld-automation-ai.com/",
+      "downloadUrl": "https://www.ld-automation-ai.com/images/ld/brand/ld-logo-horizontal-transparent.png",
+      "sourceType": "user-provided-original",
+      "note": "Logo originale fornito dall'utente; URL del marchio verificato come riferimento ufficiale."
+    }
+  ]
+}

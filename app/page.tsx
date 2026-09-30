@@ -19,12 +19,16 @@ import {
   BriefcaseBusiness,
   Pause,
   Play,
+  ArrowRight,
+  Mail,
+  MessageCircle,
 } from "lucide-react";
 import { catalog } from "./catalog";
 import { DivisionHeader } from "./division-header";
 import { SiteFooter } from "./site-footer";
 import { ContactForm } from "./contact-form";
 import { MotionVideo } from "./motion-video";
+import { PartnerLogos } from "./partner-logos";
 
 const divisionIcons = {
   Finance: BarChart3,
@@ -38,40 +42,19 @@ const divisionIcons = {
 const divisions = [
   [
     "Finance",
-    "▥",
     "Consulenza bancaria UniCredit Business e POS Worldline e SumUp.",
-    "blue",
   ],
-  [
-    "Energy",
-    "◒",
-    "Luce, gas, fotovoltaico, accumulo e ricarica con Futur Energy.",
-    "green",
-  ],
+  ["Energy", "Luce, gas, fotovoltaico, accumulo e ricarica con FuturEnergy."],
   [
     "Technology",
-    "▣",
     "Telefonia 1Mobile, fibra, dispositivi, noleggio e assistenza IT.",
-    "blue",
   ],
   [
     "Digital",
-    "⌁",
     "Siti, e-commerce, CRM e automazioni AI con L.D. Automation & AI.",
-    "blue",
   ],
-  [
-    "Security",
-    "♙",
-    "Allarmi e videosorveglianza per aziende con Very Alarm.",
-    "slate",
-  ],
-  [
-    "Academy",
-    "⌂",
-    "Formazione finanziata per sviluppare le competenze aziendali.",
-    "yellow",
-  ],
+  ["Security", "Allarmi e videosorveglianza per aziende con Very Alarm."],
+  ["Academy", "Formazione finanziata per sviluppare le competenze aziendali."],
 ];
 
 const steps = [
@@ -125,10 +108,11 @@ export default function Home() {
           <p>Servizi integrati per aziende. Sei aree, un solo interlocutore.</p>
           <div className="actions">
             <a className="button" href="#contatti">
-              Richiedi un check-up aziendale <span>→</span>
+              <BarChart3 className="button-icon" aria-hidden="true" />
+              Richiedi un check-up aziendale
             </a>
             <a className="button light" href="#divisioni">
-              Scopri le divisioni <span>→</span>
+              Scopri le divisioni <ArrowRight aria-hidden="true" />
             </a>
           </div>
         </div>
@@ -162,9 +146,11 @@ export default function Home() {
                 href={`/divisioni/${slug}`}
                 key={slug}
               >
+                <PartnerLogos division={slug as keyof typeof catalog} />
                 <small>{division.name}</small>
-                <h3>{division.brand}</h3>
-                <span>Esplora le soluzioni</span>
+                <span className="partner-link">
+                  Esplora le soluzioni <ArrowRight aria-hidden="true" />
+                </span>
               </a>
             ))}
         </div>
@@ -186,7 +172,7 @@ export default function Home() {
           </button>
         </div>
         <div className="division-grid">
-          {divisions.map(([name, , text, tone]) => {
+          {divisions.map(([name, text]) => {
             const Icon = divisionIcons[name as keyof typeof divisionIcons];
             return (
               <a
@@ -194,7 +180,7 @@ export default function Home() {
                 href={`/divisioni/${name.toLowerCase()}`}
                 key={name}
               >
-                <div className={`division-graphic ${tone}`}>
+                <div className="division-graphic">
                   <MotionVideo
                     slug={name.toLowerCase()}
                     title={name}
@@ -206,7 +192,9 @@ export default function Home() {
                 </div>
                 <h3>{name}</h3>
                 <p>{text}</p>
-                <strong>Scopri {name}</strong>
+                <strong>
+                  Scopri {name} <ArrowRight aria-hidden="true" />
+                </strong>
               </a>
             );
           })}
@@ -256,16 +244,20 @@ export default function Home() {
           </p>
         </div>
         <div className="about-note">
+          <Users className="about-icon" aria-hidden="true" />
           <b>6 divisioni integrate</b>
           <p>
             Un modello pensato per coordinare ogni progetto con semplicità e
             continuità.
           </p>
-          <a href="#contatti">Parliamone →</a>
+          <a href="#contatti">
+            Parliamone <ArrowRight aria-hidden="true" />
+          </a>
         </div>
       </section>
       <section id="contatti" className="contact">
         <div>
+          <MessageCircle className="contact-icon" aria-hidden="true" />
           <p className="eyebrow">INIZIAMO DA QUI</p>
           <h2>
             Portiamo valore
@@ -276,9 +268,10 @@ export default function Home() {
             Raccontaci le tue esigenze: il nostro team ti ricontatterà per
             definire un primo confronto.
           </p>
-          <small>
-            <a href="mailto:info@omnimpresa.it">info@omnimpresa.it</a>
-          </small>
+          <a className="contact-email" href="mailto:info@omnimpresa.it">
+            <Mail aria-hidden="true" />
+            info@omnimpresa.it
+          </a>
         </div>
         <ContactForm />
       </section>

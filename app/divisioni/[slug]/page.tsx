@@ -28,11 +28,14 @@ import {
   Sparkles,
   Siren,
   Cctv,
+  ArrowRight,
+  MessageCircle,
 } from "lucide-react";
 import { catalog } from "../../catalog";
 import { DivisionHeader } from "../../division-header";
 import { SiteFooter } from "../../site-footer";
 import { MotionVideo } from "../../motion-video";
+import { PartnerLogos } from "../../partner-logos";
 
 const icons = {
   finance: BarChart3,
@@ -91,10 +94,12 @@ export default async function DivisionPage({
           <p className="partner-label">{d.brand}</p>
           <div className="actions">
             <Link className="button" href={href}>
+              <MessageCircle aria-hidden="true" />
               {d.cta}
             </Link>
             <Link className="button light" href="/#divisioni">
               Tutte le divisioni
+              <ArrowRight aria-hidden="true" />
             </Link>
           </div>
         </div>
@@ -102,8 +107,17 @@ export default async function DivisionPage({
           <MotionVideo slug={slug} title={d.name} controls />
         </div>
       </section>
+      {slug !== "academy" && (
+        <section
+          className="division-brands"
+          aria-label={`Marchi per ${d.name}`}
+        >
+          <p className="eyebrow">COMPETENZE PER LA TUA IMPRESA</p>
+          <PartnerLogos division={slug as Slug} />
+        </section>
+      )}
       <section
-        className={`detail-solutions ${d.items.length === 1 ? "single-solution" : ""}`}
+        className={`detail-solutions ${d.items.length === 1 ? "single-solution" : d.items.length === 5 ? "five-solutions" : ""}`}
       >
         <h2>Le soluzioni {d.name} per la tua azienda</h2>
         <div>
@@ -116,7 +130,9 @@ export default async function DivisionPage({
                 </span>
                 <h3>{title}</h3>
                 <p>{description}</p>
-                <Link href={href}>Richiedi informazioni</Link>
+                <Link href={href}>
+                  Richiedi informazioni <ArrowRight aria-hidden="true" />
+                </Link>
               </article>
             );
           })}
@@ -126,6 +142,7 @@ export default async function DivisionPage({
         <h2>Partiamo dalle tue esigenze.</h2>
         <p>Un confronto per individuare il prossimo passo della tua impresa.</p>
         <Link className="button light" href={href}>
+          <MessageCircle aria-hidden="true" />
           {d.cta}
         </Link>
       </section>

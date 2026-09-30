@@ -2,7 +2,7 @@
 
 import { useEffect, useId, useRef, useState } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu, X, BarChart3 } from "lucide-react";
 
 const navigation = [
   ["Home", "#home"],
@@ -76,6 +76,7 @@ export function DivisionHeader({ home = false }: { home?: boolean }) {
         className="button header-cta"
         href={home ? "#contatti" : "/#contatti"}
       >
+        <BarChart3 className="button-icon" aria-hidden="true" />
         Richiedi analisi
       </Link>
     </header>

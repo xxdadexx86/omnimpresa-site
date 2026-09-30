@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { catalog } from "./catalog";
+import { Mail, Copy } from "lucide-react";
 
 const contactEmail = "info@omnimpresa.it";
 const divisionOptions = Object.entries(catalog);
@@ -117,9 +118,11 @@ export function ContactForm() {
       </small>
       <div className="contact-form-actions">
         <button className="button" type="submit">
+          <Mail aria-hidden="true" />
           Prepara email
         </button>
         <button className="button light" type="button" onClick={copyMessage}>
+          <Copy aria-hidden="true" />
           Copia messaggio
         </button>
       </div>
