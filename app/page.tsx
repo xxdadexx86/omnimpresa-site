@@ -3,13 +3,13 @@
 import { FormEvent, useState } from "react";
 import {
   BarChart3,
-  CarFront,
   Cpu,
   GraduationCap,
   Leaf,
   MonitorUp,
   ShieldCheck,
 } from "lucide-react";
+import { catalog } from "./catalog";
 
 const divisionIcons = {
   Finance: BarChart3,
@@ -18,42 +18,40 @@ const divisionIcons = {
   Digital: MonitorUp,
   Security: ShieldCheck,
   Academy: GraduationCap,
-  Mobility: CarFront,
 };
 
 const divisions = [
   [
     "Finance",
     "▥",
-    "Pagamenti, credito e protezione per la tua impresa.",
+    "Consulenza bancaria UniCredit Business e POS Worldline e SumUp.",
     "blue",
   ],
   [
     "Energy",
     "◒",
-    "Efficienza energetica, fonti rinnovabili e gestione forniture.",
+    "Luce, gas, fotovoltaico, accumulo e ricarica con Futur Energy.",
     "green",
   ],
   [
     "Technology",
     "▣",
-    "Connettività, dispositivi e noleggio operativo.",
+    "Telefonia 1Mobile, fibra, dispositivi, noleggio e assistenza IT.",
     "blue",
   ],
-  ["Digital", "⌁", "CRM, gestionali, siti e automazioni per crescere.", "blue"],
+  ["Digital", "⌁", "Siti, e-commerce, CRM e automazioni AI con L.D. Automation & AI.", "blue"],
   [
     "Security",
     "♙",
-    "Sicurezza aziendale, privacy e protezione dei dati.",
+    "Allarmi e videosorveglianza per aziende con Very Alarm.",
     "slate",
   ],
   [
     "Academy",
     "⌂",
-    "Formazione finanziata e competenze per il futuro.",
+    "Formazione finanziata per sviluppare le competenze aziendali.",
     "yellow",
   ],
-  ["Mobility", "▱", "Mobilità elettrica e infrastrutture di ricarica.", "blue"],
 ];
 
 const steps = [
@@ -76,6 +74,10 @@ export default function Home() {
   const [sent, setSent] = useState(false);
   const submit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = new FormData(e.currentTarget);
+    const subject = `Richiesta OMNIMPRESA · ${form.get("divisione") || "Informazioni"}`;
+    const body = `Nome e azienda: ${form.get("nome")}\nEmail: ${form.get("email")}\nDivisione: ${form.get("divisione")}\n\n${form.get("messaggio") || "Vorrei ricevere maggiori informazioni."}`;
+    window.location.href = `mailto:info@omnimpresa.it?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     setSent(true);
   };
   return (
@@ -118,16 +120,11 @@ export default function Home() {
         <div className="hero-copy">
           <p className="eyebrow">SERVIZI INTEGRATI PER AZIENDE</p>
           <h1>
-            Tutto ciò che serve
-            <br />
-            alla tua impresa.
-            <br />
-            <em>Un solo interlocutore.</em>
+            La tua impresa.
+            <br /><em>Più possibilità.</em>
           </h1>
           <p>
-            OMNIMPRESA unisce competenze e soluzioni in 7 aree strategiche per
-            semplificare la gestione aziendale, ridurre i costi e generare
-            valore.
+            Servizi integrati per aziende. Sei aree, un solo interlocutore.
           </p>
           <div className="actions">
             <a className="button" href="#contatti">
@@ -138,33 +135,20 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <div
-          className="hero-art"
-          aria-label="Le sette divisioni OMNIMPRESA orbitano intorno al brand"
-        >
-          <div className="orbit-stage">
-            <div className="orbit-core">
-              <span className="orbit-logo-mark" aria-hidden="true" />
-            </div>
-            {divisions.map(([name, , , tone], index) => {
-              const Icon = divisionIcons[name as keyof typeof divisionIcons];
-              return (
-                <div className={`orbit-path orbit-path-${index + 1}`} key={name}>
-                  <a
-                    className={`orbit-node ${tone}`}
-                    href={`/divisioni/${name.toLowerCase()}`}
-                    aria-label={`Divisione ${name}`}
-                  >
-                    <Icon aria-hidden="true" strokeWidth={1.8} />
-                    <b>{name}</b>
-                  </a>
-                </div>
-              );
-            })}
-          </div>
-        </div>
+        <div className="hero-art"><img src="/assets/omni-hero-v2.png" alt="Strumenti per pagamenti, digitale, connettività, energia e sicurezza aziendale" fetchPriority="high" /><div className="hero-caption"><span>OMNIMPRESA</span><b>Il prossimo passo, insieme.</b></div></div>
       </section>
 
+      <section className="section partner-section" aria-labelledby="partner-title">
+        <p className="eyebrow">COMPETENZE E MARCHI PER LA TUA IMPRESA</p>
+        <h2 id="partner-title">Soluzioni concrete. Un unico referente.</h2>
+        <div className="partner-grid">
+          {Object.entries(catalog).filter(([slug]) => slug !== "academy").map(([slug, division]) => (
+            <a className="partner-card" href={`/divisioni/${slug}`} key={slug}>
+              <small>{division.name}</small><h3>{division.brand}</h3><span>Esplora le soluzioni</span>
+            </a>
+          ))}
+        </div>
+      </section>
       <section id="divisioni" className="section divisions">
         <h2>Le nostre divisioni</h2>
         <div className="division-grid">
@@ -176,14 +160,10 @@ export default function Home() {
                 href={`/divisioni/${name.toLowerCase()}`}
                 key={name}
               >
-                <div className={`division-graphic ${tone}`}>
-                  <span className="division-ring division-ring-one" />
-                  <span className="division-ring division-ring-two" />
-                  <Icon aria-hidden="true" strokeWidth={1.65} />
-                </div>
+                <div className={`division-graphic ${tone}`}><video muted autoPlay loop playsInline preload="metadata" aria-hidden="true"><source src={`/assets/videos/${name === "Academy" ? "academy-business" : name.toLowerCase()}.mp4`} type="video/mp4" /></video><span className="card-icon"><Icon aria-hidden="true" /></span></div>
                 <h3>{name}</h3>
                 <p>{text}</p>
-                <strong aria-hidden="true">→</strong>
+                <strong>Scopri {name}</strong>
               </a>
             );
           })}
@@ -230,12 +210,11 @@ export default function Home() {
             <em>Un solo interlocutore.</em>
           </h2>
           <p>
-            Non una raccolta di prodotti, ma un gruppo che mette in relazione
-            esigenze aziendali, specialisti e soluzioni concrete.
+            Mettiamo in contatto le esigenze della tua azienda con competenze e soluzioni concrete.
           </p>
         </div>
         <div className="about-note">
-          <b>7 divisioni integrate</b>
+          <b>6 divisioni integrate</b>
           <p>
             Un modello pensato per coordinare ogni progetto con semplicità e
             continuità.
@@ -256,32 +235,30 @@ export default function Home() {
             definire un primo confronto.
           </p>
           <small>
-            I recapiti, la sede e l'informativa privacy sono configurabili prima
-            della pubblicazione.
+            <a href="mailto:info@omnimpresa.it">info@omnimpresa.it</a>
           </small>
         </div>
         <form onSubmit={submit}>
           {sent ? (
             <div className="success">
-              <b>Richiesta ricevuta.</b>
+              <b>Completa l'invio dalla tua email.</b>
               <p>
-                Collega qui il tuo CRM o l'indirizzo email aziendale per
-                completare l'invio.
+                Abbiamo preparato il messaggio per info@omnimpresa.it. Invialo dall'app di posta che si apre sul tuo dispositivo.
               </p>
             </div>
           ) : (
             <>
               <label>
                 Nome e azienda
-                <input required placeholder="Il tuo nome e azienda" />
+                <input name="nome" required placeholder="Il tuo nome e azienda" />
               </label>
               <label>
                 Email di lavoro
-                <input type="email" required placeholder="nome@azienda.it" />
+                <input name="email" type="email" required placeholder="nome@azienda.it" />
               </label>
               <label>
                 Di cosa hai bisogno?
-                <select defaultValue="">
+                <select name="divisione" defaultValue="">
                   <option value="" disabled>
                     Seleziona una divisione
                   </option>
@@ -290,8 +267,10 @@ export default function Home() {
                   ))}
                 </select>
               </label>
+              <label>Il tuo progetto<textarea name="messaggio" placeholder="Di cosa hai bisogno?" rows={3} /></label>
+              <small className="form-note">Il pulsante apre la tua app di posta con il messaggio pronto.</small>
               <button className="button" type="submit">
-                Richiedi analisi <span>→</span>
+                Prepara email
               </button>
             </>
           )}
